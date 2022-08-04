@@ -1,0 +1,15 @@
+/home/maxok/source/Converter/bin/Debug/net6.0/Converter
+/home/maxok/source/Converter/bin/Debug/net6.0/Converter.deps.json
+/home/maxok/source/Converter/bin/Debug/net6.0/Converter.runtimeconfig.json
+/home/maxok/source/Converter/bin/Debug/net6.0/Converter.dll
+/home/maxok/source/Converter/bin/Debug/net6.0/Converter.pdb
+/home/maxok/source/Converter/obj/Debug/net6.0/Converter.csproj.AssemblyReference.cache
+/home/maxok/source/Converter/obj/Debug/net6.0/Converter.GeneratedMSBuildEditorConfig.editorconfig
+/home/maxok/source/Converter/obj/Debug/net6.0/Converter.AssemblyInfoInputs.cache
+/home/maxok/source/Converter/obj/Debug/net6.0/Converter.AssemblyInfo.cs
+/home/maxok/source/Converter/obj/Debug/net6.0/Converter.csproj.CoreCompileInputs.cache
+/home/maxok/source/Converter/obj/Debug/net6.0/Converter.dll
+/home/maxok/source/Converter/obj/Debug/net6.0/refint/Converter.dll
+/home/maxok/source/Converter/obj/Debug/net6.0/Converter.pdb
+/home/maxok/source/Converter/obj/Debug/net6.0/Converter.genruntimeconfig.cache
+/home/maxok/source/Converter/obj/Debug/net6.0/ref/Converter.dll
