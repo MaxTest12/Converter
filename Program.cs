@@ -1,4 +1,6 @@
-﻿namespace Converter
+﻿using System;
+
+namespace Converter
 {
     class Program
     {
@@ -6,54 +8,59 @@
         {
             Console.WriteLine("Podaj jednostkę i wartość");
             Console.WriteLine("jednostka:");
-            string unit = Console.ReadLine();
+            string  unit = Console.ReadLine();
             Console.WriteLine("wartość:");
-            float value = Convert.ToSingle(Console.ReadLine());
-            if(unit == "km" || unit == "m")
+            double value = Convert.ToSingle(Console.ReadLine());
+            var result =  KM_M(unit,value);
+            if(unit.Equals("KM",StringComparison.InvariantCultureIgnoreCase) || unit.Equals("M",StringComparison.InvariantCultureIgnoreCase))
             {
-             KM_M(unit,value);
+              result = KM_M(unit,value);
             }
-            else if(unit == "min" || unit == "h")
+            else if(unit.Equals("MIN",StringComparison.InvariantCultureIgnoreCase)|| unit.Equals("H",StringComparison.InvariantCultureIgnoreCase))
             {
-              MIN_H(unit , value);  
+              result = MIN_H(unit,value);  
             }
-            else if(unit == "ft" || unit == "m")
+            else if(unit.Equals("FT",StringComparison.InvariantCultureIgnoreCase) || unit.Equals("M",StringComparison.InvariantCultureIgnoreCase))
             {
-              FT_M(unit , value);
+              result =  FT_M(unit,value);
             }
+            Console.WriteLine("jest to: "+result);
         }
-        static void KM_M(string unit , float value)
+        static double KM_M(string unit , double value)
         {
          if(unit == "km")
          {
-          Console.WriteLine("Jest to " + value * 1000 +"m");
+          value = value * 1000;
          }
          else
          {
-          Console.WriteLine("Jest to " + value / 1000 + "km");
+          value =  value / 1000;
          }
+          return  value;
         }
-        static void MIN_H(string unit, float value)
+        static double MIN_H(string unit, double value)
         {
           if(unit == "min")
           {
-            Console.WriteLine("Jest to "+value / 60 + "h");
+            value = value / 60;
           }
           else
           {
-            Console.WriteLine("Jest to "+value * 60 + "min");
+           value = value * 60 ;
           }
+          return  value;
         }
-        static void FT_M(string unit, float value)
+        static double FT_M(string unit, double value)
         {
           if(unit == "FT")
           {
-            Console.WriteLine("Jest to "+ value * 0,3048 + "m");
+           value = value * 0.3048;
           }
           else
           {
-            Console.WriteLine("Jest to "+ value * 3,28084 + "ft");
+            value = value * 3.28084;
           }
+          return value;
         }
     }
 }
